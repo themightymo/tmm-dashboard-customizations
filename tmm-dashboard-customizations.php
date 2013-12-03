@@ -52,7 +52,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Call The Mighty Mo! Design Co. at 612-293-8629 or email <a href="mailto:toby@themightymo.com">toby@themightymo.com</a>';
+  echo 'Questions? Call The Mighty Mo! Design Co. at 612-293-8629 or email <a href="mailto:hello@themightymo.com">hello@themightymo.com</a>';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
