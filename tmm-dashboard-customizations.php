@@ -6,7 +6,7 @@
  * Author: The Mighty Mo! Design Co. LLC
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.1
+ * Version: 1.2
  */
  
 // Add and Remove Dashboard widgets - via http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
@@ -52,7 +52,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Call The Mighty Mo! Design Co. at 612-293-8629 or email <a href="mailto:hello@themightymo.com">hello@themightymo.com</a>';
+  echo 'Questions? Get <strong>LIVE support</strong> from 9-5 CST by using the chat widget on the bottom-right of this page. Or call us at 612-293-8629.  Or email <a href="mailto:support@themightymo.com">support@themightymo.com</a>. <script type="text/javascript">var $zoho= $zoho || {livedesk:{values:{},ready:function(){}}};var d=document;s=d.createElement("script");s.type="text/javascript";s.defer=true;s.src="https://livedesk.zoho.com/themightymodesignco/float.ls?embedname=themightymodesignco";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
@@ -116,14 +116,15 @@ add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' );
 
 
 // Add support link to admin bar - via http://www.onextrapixel.com/2012/02/24/taking-control-of-wordpress-3-0-admin-bar/
-//add_action( 'wp_before_admin_bar_render', 'tmm_more_adminbar_tweaks');
+add_action( 'wp_before_admin_bar_render', 'tmm_more_adminbar_tweaks');
 function tmm_more_adminbar_tweaks() {
     global $wp_admin_bar;
 	$wp_admin_bar->add_menu( 
 		array( 
 			'id' => 'tmm-support', //the view-site ID that refers to what we are doing.
-			'title' => __( 'Stuck? Click here to sign up for support.' ), //the anchor text that links to homepage.
-			'href' => 'http://www.themightymo.com/contact-us/' 
+			'title' => __( 'Stuck? Get LIVE SUPPORT here (9-5 CST).' ), //the anchor text that links to homepage.
+			'href' => 'http://www.themightymo.com/magicwonderful/magic-wonderful-member-support/',
+			'meta' => array( 'target' => '_blank' )
 		) 
 	);
 }
