@@ -21,14 +21,17 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
+	remove_meta_box( 'wpe_dify_news_feed', 'dashboard', 'normal');
+	remove_meta_box( 'ga_dashboard_widget', 'dashboard', 'normal');
+	
 	
 	// Hide WP 3.3 "Upgrade" welcome panel.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
 	$user_id = get_current_user_id();
 	if ( 0 != get_user_meta( $user_id, 'show_welcome_panel', true ) )
 		update_user_meta( $user_id, 'show_welcome_panel', 0 );
 	
-	// add a custom dashboard widget
-	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo! Design Co.', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
+	// add a custom dashboard widget RSS feed
+	//wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo! Design Co.', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
 	
 }
 function tmm_dashboard_custom_feed_output() {
@@ -46,7 +49,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST).';
+  echo 'Questions? Stuck? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST).';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
