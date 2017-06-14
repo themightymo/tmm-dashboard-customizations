@@ -1,40 +1,34 @@
 <?php
 /*
- * Plugin Name: Dashboard Customizations by The Mighty Mo! Design Co.
+ * Plugin Name: Dashboard Customizations by The Mighty Mo!
  * Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * Description: Update the dashboard widgets.
- * Author: The Mighty Mo! Design Co. LLC
+ * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.2
+ * Version: 1.3
  */
  
-// Add and Remove Dashboard widgets - via http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
+// Add and Remove Dashboard widgets - via https://codex.wordpress.org/Dashboard_Widgets_API#Advanced:_Removing_Dashboard_Widgets and http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
 add_action('wp_dashboard_setup', 'tmm_dashboard_widgets');
 function tmm_dashboard_widgets() {
-	//global $wp_meta_boxes;  // use to get all the widget IDs
-	//var_dump( $wp_meta_boxes['dashboard'] ); // use to get all the widget IDs
-	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-	//remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
-	remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );
-	
-	
-	remove_meta_box( 'dashboard_browser_nag', 'dashboard', 'normal' );
-	//remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-	remove_meta_box( 'pb_backupbuddy_stats', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
 	
 	// Hide WP 3.3 "Upgrade" welcome panel.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
 	$user_id = get_current_user_id();
 	if ( 0 != get_user_meta( $user_id, 'show_welcome_panel', true ) )
 		update_user_meta( $user_id, 'show_welcome_panel', 0 );
 	
-	
 	// add a custom dashboard widget
-	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo! Design Co.', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output
+	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo! Design Co.', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
 	
 }
 function tmm_dashboard_custom_feed_output() {
@@ -52,7 +46,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Get <strong>LIVE support</strong> from 9-5 CST by using the chat widget on the bottom-right of this page. Or call us at 612-293-8629.  Or email <a href="mailto:support@themightymo.com">support@themightymo.com</a>. <script type="text/javascript">var $zoho= $zoho || {livedesk:{values:{},ready:function(){}}};var d=document;s=d.createElement("script");s.type="text/javascript";s.defer=true;s.src="https://livedesk.zoho.com/themightymodesignco/float.ls?embedname=themightymodesignco";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>';
+  echo 'Questions? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST).';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
@@ -113,18 +107,3 @@ function tmm_tweaked_admin_bar() {
     $wp_admin_bar->remove_menu('wp-logo');
 }
 add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' ); 
-
-
-// Add support link to admin bar - via http://www.onextrapixel.com/2012/02/24/taking-control-of-wordpress-3-0-admin-bar/
-add_action( 'wp_before_admin_bar_render', 'tmm_more_adminbar_tweaks');
-function tmm_more_adminbar_tweaks() {
-    global $wp_admin_bar;
-	$wp_admin_bar->add_menu( 
-		array( 
-			'id' => 'tmm-support', //the view-site ID that refers to what we are doing.
-			'title' => __( 'Stuck? Get LIVE SUPPORT here (9-5 CST).' ), //the anchor text that links to homepage.
-			'href' => 'http://www.themightymo.com/magicwonderful/magic-wonderful-member-support/',
-			'meta' => array( 'target' => '_blank' )
-		) 
-	);
-}
