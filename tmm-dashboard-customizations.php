@@ -147,3 +147,18 @@ function tmm_add_username_to_admin_body_class( $classes ) {
     
 }
 add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
+
+// Add Advanced Custom Fields Options/Sitewide Content page for wp-login.php image underneath the normal "Settings" menu
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Login Image',
+		'menu_title' 	=> 'Login Image',
+		'parent_slug' 	=> $parent['options-general.php'],
+		'parent'     	=> 'options-general.php',
+		'menu_slug'     => 'my_settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false, 
+	));
+	
+}
