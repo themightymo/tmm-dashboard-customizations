@@ -1,3 +1,5 @@
-#dashboard-customizations-by-the-mighty-mo-design-co {
+#dashboard-customizations-by-the-mighty-mo-design-co,
+.jp-banner,
+.monsterinsights-notice {
 	display: none;
 }

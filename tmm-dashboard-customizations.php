@@ -23,6 +23,11 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
 	remove_meta_box( 'wpe_dify_news_feed', 'dashboard', 'normal');
 	remove_meta_box( 'ga_dashboard_widget', 'dashboard', 'normal');
+	remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'normal' );
+	remove_meta_box( 'jetpack_summary_widget', 'dashboard', 'normal' );
+	remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'normal' );
+	remove_meta_box( 'jp-banner', 'dashboard', 'normal' );
+	
 	
 	
 	// Hide WP 3.3 "Upgrade" welcome panel.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
@@ -31,7 +36,7 @@ function tmm_dashboard_widgets() {
 		update_user_meta( $user_id, 'show_welcome_panel', 0 );
 	
 	// add a custom dashboard widget RSS feed
-	//wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo! Design Co.', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
+	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
 	
 }
 function tmm_dashboard_custom_feed_output() {
@@ -94,11 +99,18 @@ function tmm_display_post_thumbnail_column($col, $id){
 
 
 // Hide this plugin from the plugins list in the dashboard - via http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
+
+
 function tmm_enqueue_admin_styles($hook) {
-    if( 'plugins.php' != $hook )
-        return;
-    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
-    wp_enqueue_style( 'tmm-enqueue-admin-styles' );
+		
+    //if( 'plugins.php' != $hook )
+    //return;
+    global $current_user;
+	get_currentuserinfo();
+	if ( $current_user->user_login != 'wpengine' && $current_user->user_login != 'toby' && $current_user->user_login != 'MightyMo' && $current_user->user_login != 'themightymo') {
+	    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
+	    wp_enqueue_style( 'tmm-enqueue-admin-styles' );
+	}
 }
 add_action( 'admin_enqueue_scripts', 'tmm_enqueue_admin_styles' );
 
@@ -110,3 +122,6 @@ function tmm_tweaked_admin_bar() {
     $wp_admin_bar->remove_menu('wp-logo');
 }
 add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' ); 
+
+
+
