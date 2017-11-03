@@ -28,17 +28,30 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'normal' );
 	remove_meta_box( 'jp-banner', 'dashboard', 'normal' );
 	
+	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
+	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );
 	
-	
-	// Hide WP 3.3 "Upgrade" welcome panel.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
+	// Hide WP 3.3 "Upgrade" welcome panel for multisite.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
 	$user_id = get_current_user_id();
 	if ( 0 != get_user_meta( $user_id, 'show_welcome_panel', true ) )
 		update_user_meta( $user_id, 'show_welcome_panel', 0 );
+		
+}
+
+// Function that outputs the contents of the dashboard widget
+function tmm_support_dashboard_widget_function( $post, $callback_args ) {
 	
-	// add a custom dashboard widget RSS feed
-	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' ); //add new RSS feed output	
+	echo "
+		<img src='" . plugins_url('/support.png', __FILE__) . "' style='max-width:15%;display:inline-block;'>
+		<div style='display:inline-block;max-width:66%;vertical-align: top;'>Hi!  It's me, Toby Cryns, from The Mighty Mo!  <br>I'm here to help.  Call or email with questions.
+		<ul style='list-style: disc inside;'>
+			<li>Email: <a href='mailto:toby@themightymo.com'>toby@themightymo.com</a></li>
+			<li>Phone: (612) 293-8629</li>
+		</ul></div>";
 	
 }
+
+// Display themightymo.com blog feed on the Dashboard
 function tmm_dashboard_custom_feed_output() {
      echo '<div class="rss-widget">';
      wp_widget_rss_output(array(
@@ -69,7 +82,6 @@ function tmm_single_screen_dashboard() { return 1; }
 add_filter( 'get_user_option_screen_layout_dashboard', 'tmm_single_screen_dashboard' );
 
 
-
 // Display the featured images of posts in the "All Posts" view in the admin via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/ 
 // Add the posts and pages columns filter. They can both use the same function.
 add_filter('manage_posts_columns', 'tmm_add_post_thumbnail_column', 5);
@@ -98,22 +110,18 @@ function tmm_display_post_thumbnail_column($col, $id){
 }
 
 
-// Hide this plugin from the plugins list in the dashboard - via http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
-
-
+// Hide this plugin from the plugins list in the dashboard if you aren't The Mighty Mo! - via http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
 function tmm_enqueue_admin_styles($hook) {
 		
-    //if( 'plugins.php' != $hook )
-    //return;
+    if ( 'plugins.php' != $hook && 'index.php' != $hook ) 
+    return;
+  
     global $current_user;
 	get_currentuserinfo();
-	if ( $current_user->user_login != 'wpengine' && $current_user->user_login != 'toby' && $current_user->user_login != 'MightyMo' && $current_user->user_login != 'themightymo') {
-	    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
-	    wp_enqueue_style( 'tmm-enqueue-admin-styles' );
-	}
+    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
+    wp_enqueue_style( 'tmm-enqueue-admin-styles' );
 }
 add_action( 'admin_enqueue_scripts', 'tmm_enqueue_admin_styles' );
-
 
 
 //Remove the WordPress logo from the admin bar
@@ -121,7 +129,4 @@ function tmm_tweaked_admin_bar() {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('wp-logo');
 }
-add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' ); 
-
-
-
+add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' );
