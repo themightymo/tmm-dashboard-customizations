@@ -4,6 +4,16 @@
 [data-slug="dashboard-customizations-by-the-mighty-mo"] {
 	display: none;
 }
+.username-themightymo #dashboard-customizations-by-the-mighty-mo-design-co,
+.username-themightymo .jp-banner,
+.username-themightymo .monsterinsights-notice,
+.username-themightymo [data-slug="dashboard-customizations-by-the-mighty-mo"],
+.username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
+.username-toby .jp-banner,
+.username-toby .monsterinsights-notice,
+.username-toby [data-slug="dashboard-customizations-by-the-mighty-mo"] {
+	display: table-row;
+}
 #tmm_support_dashboard_widget {
 	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);
 }

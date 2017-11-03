@@ -137,3 +137,13 @@ function tmm_tweaked_admin_bar() {
     $wp_admin_bar->remove_menu('wp-logo');
 }
 add_action( 'wp_before_admin_bar_render', 'tmm_tweaked_admin_bar' );
+
+// Add username to admin body class so we can hide/display stuff for certain users.
+function tmm_add_username_to_admin_body_class( $classes ) {
+	
+    global $current_user;
+	$current_user = wp_get_current_user();
+    return "$classes username-" . $current_user->user_login;
+    
+}
+add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
