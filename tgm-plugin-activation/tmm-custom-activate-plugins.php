@@ -59,42 +59,27 @@ function tmm_register_required_plugins() {
 	 */
 	$plugins = array(
 
-		// This is an example of how to include a plugin bundled with a theme.
+		// ACF Pro is used for the wp-login.php image.
 		array(
-			'name'               => 'TGM Example Plugin', // The plugin name.
-			'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
-			'source'             => dirname( __FILE__ ) . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
-			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+			'name'      => 'Advanced Custom Fields Pro',
+			'slug'      => 'advanced-custom-fields-pro',
+			'required'  => true,
+			'source'    => 'https://github.com/themightymo/acfpro/archive/master.zip',
+		),
+		
+		// afragen's Github Updater plugin keeps the tmm-dashboard-customizations plugin up-to-date
+		array(
+			'name'      => 'Github Updater',
+			'slug'      => 'github-updater',
+			'required'  => true,
+			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
 		),
 
-		// This is an example of how to include a plugin from an arbitrary external source in your theme.
+		// Monster Insights for Google Analytics from wp.org repo
 		array(
-			'name'         => 'TGM New Media Plugin', // The plugin name.
-			'slug'         => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
-			'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
-			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
-		),
-
-		// This is an example of how to include a plugin from a GitHub repository in your theme.
-		// This presumes that the plugin code is based in the root of the GitHub repository
-		// and not in a subdirectory ('/src') of the repository.
-		array(
-			'name'      => 'Adminbar Link Comments to Pending',
-			'slug'      => 'adminbar-link-comments-to-pending',
-			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
-		),
-
-		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
-			'name'      => 'BuddyPress',
-			'slug'      => 'buddypress',
-			'required'  => false,
+			'name'      => 'Monster Insights',
+			'slug'      => 'google-analytics-for-wordpress',
+			'required'  => true,
 		),
 
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
@@ -107,6 +92,7 @@ function tmm_register_required_plugins() {
 			'name'        => 'WordPress SEO by Yoast',
 			'slug'        => 'wordpress-seo',
 			'is_callable' => 'wpseo_init',
+			'required'  => true,
 		),
 
 	);

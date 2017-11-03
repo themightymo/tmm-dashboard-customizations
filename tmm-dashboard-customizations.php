@@ -2,11 +2,13 @@
 /*
  * Plugin Name: Dashboard Customizations by The Mighty Mo!
  * Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
- * Description: Update the dashboard widgets.
+ * Description: Removes stupid dashboard widgets.  Adds RSS feed from themightymo.com. Forces activation of Monster Insights and Yoast SEO.  Adds ability to update wp-login.php image.
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
  * Version: 1.4
+ * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
+ * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
  */
  
