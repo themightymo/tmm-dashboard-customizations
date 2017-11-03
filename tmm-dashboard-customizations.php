@@ -6,7 +6,8 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.3
+ * Version: 1.4
+ * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
  */
  
 // Add and Remove Dashboard widgets - via https://codex.wordpress.org/Dashboard_Widgets_API#Advanced:_Removing_Dashboard_Widgets and http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
