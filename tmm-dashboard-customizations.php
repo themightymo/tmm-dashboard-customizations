@@ -148,6 +148,10 @@ function tmm_add_username_to_admin_body_class( $classes ) {
 }
 add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
 
+
+/*
+	BEGIN UPDATE THE WP-LOGIN.PHP LOGO
+*/
 // Add Advanced Custom Fields Options/Sitewide Content page for wp-login.php image underneath the normal "Settings" menu
 if( function_exists('acf_add_options_page') ) {
 	
@@ -156,9 +160,85 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title' 	=> 'Login Image',
 		'parent_slug' 	=> $parent['options-general.php'],
 		'parent'     	=> 'options-general.php',
-		'menu_slug'     => 'my_settings',
-        'capability'    => 'edit_posts',
+		'menu_slug'     => 'login_logo',
+        'capability'    => 'manage_options',
         'redirect'      => false, 
 	));
 	
 }
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_59fce410672c5',
+	'title' => 'Login Logo',
+	'fields' => array (
+		array (
+			'key' => 'field_59fce5e24eb58',
+			'label' => 'Login Logo Image',
+			'name' => 'login_logo_image',
+			'type' => 'image',
+			'value' => NULL,
+			'instructions' => 'Dimensions: 320x65px',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'full',
+			'library' => 'all',
+			'min_width' => 320,
+			'min_height' => 65,
+			'min_size' => '',
+			'max_width' => 320,
+			'max_height' => 65,
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'login_logo',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url("<?php the_field('login_logo_image', 'option'); ?>");
+			height:65px;
+			width:320px;
+			background-size: 320px 65px;
+			background-repeat: no-repeat;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Your Site Name and Info';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+/*
+	END UPDATE THE WP-LOGIN.PHP LOGO
+*/
