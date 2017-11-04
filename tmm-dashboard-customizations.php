@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.5.6
+ * Version: 1.5.7
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -182,7 +182,7 @@ acf_add_local_field_group(array (
 			'name' => 'login_logo_image',
 			'type' => 'image',
 			'value' => NULL,
-			'instructions' => 'Dimensions: 320x65px',
+			'instructions' => 'Must be 320px wide with any height.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -194,10 +194,10 @@ acf_add_local_field_group(array (
 			'preview_size' => 'full',
 			'library' => 'all',
 			'min_width' => 320,
-			'min_height' => 65,
+			'min_height' => '',
 			'min_size' => '',
 			'max_width' => 320,
-			'max_height' => 65,
+			'max_height' => '',
 			'max_size' => '',
 			'mime_types' => '',
 		),
@@ -266,6 +266,9 @@ function my_login_logo() { ?>
 	        background: none;
 	        padding: 0;
         }
+        body #login {
+	        padding: 0;
+        }
         body.login form .input, 
         body.login form input[type="checkbox"], 
         body.login input[type="text"] {
@@ -275,12 +278,22 @@ function my_login_logo() { ?>
 		}
         #login h1 a, 
         .login h1 a {
+	        display:none;
             background-image: url("<?php the_field('login_logo_image', 'option'); ?>");
 			height:65px;
 			width:320px;
 			background-size: 320px 65px;
 			background-repeat: no-repeat;
         }
+        .login h1::before {
+		    content: url('<?php 
+		        if ( get_field('login_logo_image', 'option') ) { 
+			        the_field('login_logo_image', 'option'); 
+			    } else { 
+				    return;
+				} 
+				?>');
+    	}
         body.wp-core-ui .button-primary {
 	        background: #2196F3;
 	        text-transform: uppercase;
