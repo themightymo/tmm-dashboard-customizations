@@ -290,7 +290,7 @@ function my_login_logo() { ?>
 		        if ( get_field('login_logo_image', 'option') ) { 
 			        the_field('login_logo_image', 'option'); 
 			    } else { 
-				    return;
+				    // do nothing
 				} 
 				?>');
     	}
