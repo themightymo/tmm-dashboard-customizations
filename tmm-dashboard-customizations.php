@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.5.4
+ * Version: 1.5.5
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -156,21 +156,25 @@ add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Login Image',
-		'menu_title' 	=> 'Login Image',
+		'page_title' 	=> 'Login Design',
+		'menu_title' 	=> 'Login Design',
 		'parent_slug' 	=> $parent['options-general.php'],
 		'parent'     	=> 'options-general.php',
-		'menu_slug'     => 'login_logo',
+		'menu_slug'     => 'login_design',
         'capability'    => 'manage_options',
         'redirect'      => false, 
 	));
 	
 }
+
+/* 
+	BEGIN ACF CUSTOM FIELDS
+*/
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
 	'key' => 'group_59fce410672c5',
-	'title' => 'Login Logo',
+	'title' => 'Login Design',
 	'fields' => array (
 		array (
 			'key' => 'field_59fce5e24eb58',
@@ -197,13 +201,38 @@ acf_add_local_field_group(array (
 			'max_size' => '',
 			'mime_types' => '',
 		),
+		array (
+			'key' => 'field_59fdbc32e4496',
+			'label' => 'Login Background Image',
+			'name' => 'login_bg_image',
+			'type' => 'image',
+			'value' => NULL,
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'full',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
 	),
 	'location' => array (
 		array (
 			array (
 				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'login_logo',
+				'value' => 'login_design',
 			),
 		),
 	),
@@ -218,14 +247,31 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+/* 
+	END ACF CUSTOM FIELDS
+*/
+
 function my_login_logo() { ?>
     <style type="text/css">
-        #login h1 a, .login h1 a {
+        html body {
+	        background: url('<?php 
+		        if ( get_field('login_bg_image', 'option') ) { 
+			        the_field('login_bg_image', 'option'); 
+			    } else { 
+				    echo plugins_url('/login-bg.png', __FILE__);
+				} 
+				?>');
+        }
+        #login h1 a, 
+        .login h1 a {
             background-image: url("<?php the_field('login_logo_image', 'option'); ?>");
 			height:65px;
 			width:320px;
 			background-size: 320px 65px;
 			background-repeat: no-repeat;
+        }
+        body.wp-core-ui .button-primary {
+	        background: #2196F3;
         }
     </style>
 <?php }
@@ -236,7 +282,7 @@ function my_login_logo_url() {
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 function my_login_logo_url_title() {
-    return 'Your Site Name and Info';
+    return get_bloginfo('name');
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 /*
