@@ -70,7 +70,7 @@ function tmm_support_dashboard_widget_function( $post, $callback_args ) {
 function tmm_dashboard_custom_feed_output() {
      echo '<div class="rss-widget">';
      wp_widget_rss_output(array(
-          'url' => 'http://www.themightymo.com/feed',  //put your feed URL here
+          'url' => 'https://www.themightymo.com/category/tmm-dashboard-customizations-feed/feed/',  //put your feed URL here
           'title' => 'Updates from The Mighty Mo! Design Co.',
           'items' => 4, //how many posts to show
           'show_summary' => 1,
@@ -308,6 +308,13 @@ function my_login_logo() { ?>
 	        text-transform: uppercase;
 	        width:50%;
         }
+        body.login,
+		body.login label,
+		body.login *,
+		body.login #backtoblog a, 
+		body.login #nav a {
+			color: #fff;
+		}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
