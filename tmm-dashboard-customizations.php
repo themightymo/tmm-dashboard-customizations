@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.5.7
+ * Version: 1.5.8
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -15,10 +15,16 @@
 
 require_once dirname( __FILE__ ) . '/tgm-plugin-activation/class-tgm-plugin-activation.php';
 require_once dirname( __FILE__ ) . '/tgm-plugin-activation/tmm-custom-activate-plugins.php';
+
  
 // Add and Remove Dashboard widgets - via https://codex.wordpress.org/Dashboard_Widgets_API#Advanced:_Removing_Dashboard_Widgets and http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
 add_action('wp_dashboard_setup', 'tmm_dashboard_widgets');
 function tmm_dashboard_widgets() {
+	// BEGIN REMOVE ALL DASHBOARD WIDGETS
+	global $wp_meta_boxes;
+    $wp_meta_boxes['dashboard']['normal']['core'] = array();
+    $wp_meta_boxes['dashboard']['side']['core'] = array();
+    // END REMOVE ALL DASHBOARD WIDGETS
 	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
 	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
@@ -34,6 +40,7 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'jetpack_summary_widget', 'dashboard', 'normal' );
 	remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'normal' );
 	remove_meta_box( 'jp-banner', 'dashboard', 'normal' );
+	remove_meta_box( 'email_log_dashboard_widget', 'dashboard', 'normal' );
 	
 	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
 	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );

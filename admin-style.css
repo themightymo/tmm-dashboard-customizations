@@ -1,6 +1,7 @@
 #dashboard-customizations-by-the-mighty-mo-design-co,
 .jp-banner,
 .monsterinsights-notice,
+.error
 [data-slug="dashboard-customizations-by-the-mighty-mo"] {
 	display: none;
 }
@@ -16,4 +17,8 @@
 }
 #tmm_support_dashboard_widget {
 	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);
+}
+/* remove WPMUDEV junk */
+div.wpmudev-new, div.wpmudev-message, div.wpdv-msg, #wpmu-install-dashboard, .frash-notice {
+	display: none !important;
 }
