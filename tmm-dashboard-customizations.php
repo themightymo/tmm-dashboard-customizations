@@ -45,6 +45,7 @@ function tmm_dashboard_widgets() {
 	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
 	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );
 	
+	
 	// Hide WP 3.3 "Upgrade" welcome panel for multisite.  Via http://wordpress.org/extend/plugins/hide-welcome-panel-for-multisite/
 	$user_id = get_current_user_id();
 	if ( 0 != get_user_meta( $user_id, 'show_welcome_panel', true ) )
@@ -154,6 +155,7 @@ function tmm_add_username_to_admin_body_class( $classes ) {
     
 }
 add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
+
 
 
 /*

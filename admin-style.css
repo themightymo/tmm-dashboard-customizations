@@ -19,6 +19,6 @@
 	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);
 }
 /* remove WPMUDEV junk */
-div.wpmudev-new, div.wpmudev-message, div.wpdv-msg, #wpmu-install-dashboard, .frash-notice {
+div.wpmudev-new, div.wpmudev-message, div.wpdv-msg, #wpmu-install-dashboard, .wrap .frash-notice.notice {
 	display: none !important;
 }
