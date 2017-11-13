@@ -58,14 +58,6 @@ function tmm_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-
-		// ACF Pro is used for the wp-login.php image.
-		array(
-			'name'      => 'Advanced Custom Fields Pro',
-			'slug'      => 'advanced-custom-fields-pro',
-			'required'  => true,
-			'source'    => 'https://github.com/themightymo/acfpro/archive/master.zip',
-		),
 		
 		// afragen's Github Updater plugin keeps the tmm-dashboard-customizations plugin up-to-date
 		array(
@@ -82,12 +74,32 @@ function tmm_register_required_plugins() {
 			'required'  => true,
 		),
 		
-		// Monster Insights for Google Analytics from wp.org repo
+		// Admin Bar Edit Links for Gravity Forms from wp.org repo
 		array(
 			'name'      => 'Admin Bar Edit Links for Gravity Forms',
 			'slug'      => 'admin-bar-edit-links-for-gravity-forms',
 			'required'  => true,
 		),
+		
+		// Required Plugin #1
+		array(
+			'name'         => 'Required Plugin 1', // The plugin name.
+			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.wpengine.com/wp-content/uploads/gravityforms.zip', // The plugin source.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.wpengine.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
+		),
+		
+		// Required Plugin #2
+		array(
+			'name'         => 'Required Plugin 2', // The plugin name.
+			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // The plugin source.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
+		),
+		
+		
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
