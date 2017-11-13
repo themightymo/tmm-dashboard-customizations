@@ -82,6 +82,13 @@ function tmm_register_required_plugins() {
 			'required'  => true,
 		),
 		
+		// Monster Insights for Google Analytics from wp.org repo
+		array(
+			'name'      => 'Admin Bar Edit Links for Gravity Forms',
+			'slug'      => 'admin-bar-edit-links-for-gravity-forms',
+			'required'  => true,
+		),
+		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
 		// 'wordpress-seo-premium'.
