@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.5.11
+ * Version: 1.5.12
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -262,6 +262,11 @@ endif;
 
 function my_login_logo() { ?>
     <style type="text/css">
+        html {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
         html body {
 	        background: url('<?php 
 		        if ( get_field('login_bg_image', 'option') ) { 
@@ -271,12 +276,19 @@ function my_login_logo() { ?>
 				} 
 				?>');
         }
+        html body {
+	        display: table;
+			margin: 0 auto;
+			height: 100%;
+        }
         body.login form {
 	        background: none;
 	        padding: 0;
         }
         body #login {
 	        padding: 0;
+	        display: table-cell;
+			vertical-align: middle;
         }
         body.login form .input, 
         body.login form input[type="checkbox"], 
