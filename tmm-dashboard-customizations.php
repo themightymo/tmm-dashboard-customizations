@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.5.12
+ * Version: 1.5.13
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -329,6 +329,12 @@ function my_login_logo() { ?>
 		}
 		body.login input[name=jetpack_protect_num] { 
 		    color: #000;
+		}
+		.login .message {
+			background-color: inherit !important;
+		}
+		.login #login_error {
+			background-color: inherit !important;
 		}
     </style>
 <?php }
