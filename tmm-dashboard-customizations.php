@@ -41,6 +41,7 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'normal' );
 	remove_meta_box( 'jp-banner', 'dashboard', 'normal' );
 	remove_meta_box( 'email_log_dashboard_widget', 'dashboard', 'normal' );
+	remove_meta_box( 'themefusion_news', 'dashboard', 'normal' );
 	
 	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
 	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );
