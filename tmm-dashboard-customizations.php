@@ -353,3 +353,10 @@ add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 /*
 	END UPDATE THE WP-LOGIN.PHP LOGO
 */
+
+// Remove plugin editor and theme editor from WP Dashboard menus
+add_action('admin_init', 'tmm_remove_menu_elements', 102);
+function tmm_remove_menu_elements(){
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
+	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+}
