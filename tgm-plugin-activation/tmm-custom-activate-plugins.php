@@ -113,6 +113,11 @@ function tmm_register_required_plugins() {
 			'is_callable' => 'wpseo_init',
 			'required'  => true,
 		),
+		array(
+			'name'        => 'WP Engine Advanced Cache',
+			'slug'        => 'wpe-advanced-cache-options',
+			'required'  => false,
+		),
 
 	);
 
