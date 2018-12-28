@@ -317,6 +317,10 @@ function my_login_logo() { ?>
 				} 
 				?>');
     	}
+    	/* Jetpack's Login Protection */
+    	input#jetpack_protect_answer {
+		    color: #fff;
+		}
         body.wp-core-ui .button-primary {
 	        background: #2196F3;
 	        text-transform: uppercase;
