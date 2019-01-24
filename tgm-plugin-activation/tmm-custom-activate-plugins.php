@@ -112,6 +112,7 @@ function tmm_register_required_plugins() {
 			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'      => '9.5'
 			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
