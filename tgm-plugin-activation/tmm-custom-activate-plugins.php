@@ -71,14 +71,14 @@ function tmm_register_required_plugins() {
 		array(
 			'name'      => 'Monster Insights',
 			'slug'      => 'google-analytics-for-wordpress',
-			'required'  => false,
+			'required'  => true,
 		),
 		
 		// Admin Bar Edit Links for Gravity Forms from wp.org repo
 		array(
 			'name'      => 'Admin Bar Edit Links for Gravity Forms',
 			'slug'      => 'admin-bar-edit-links-for-gravity-forms',
-			'required'  => false,
+			'required'  => true,
 		),
 		
 		// Required Plugin #1
@@ -86,7 +86,7 @@ function tmm_register_required_plugins() {
 			'name'         => 'Gravity Forms', // The plugin name.
 			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/gravityforms.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'      => '2.4.5.2',
 			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
@@ -96,7 +96,7 @@ function tmm_register_required_plugins() {
 			'name'         => 'ACF Pro', // The plugin name.
 			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		// Required Plugin #3
@@ -104,7 +104,7 @@ function tmm_register_required_plugins() {
 			'name'         => 'WP Rocket', // The plugin name.
 			'slug'         => 'wp-rocket', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wp-rocket.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wp-rocket.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		// Required Plugin #4
@@ -112,7 +112,7 @@ function tmm_register_required_plugins() {
 			'name'         => 'Yoast SEO Premium', // The plugin name.
 			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 			'version'      => '9.5',
 			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
 		),
@@ -127,12 +127,12 @@ function tmm_register_required_plugins() {
 			'name'        => 'WordPress SEO by Yoast',
 			'slug'        => 'wordpress-seo',
 			'is_callable' => 'wpseo_init',
-			'required'  => false,
+			'required'  => true,
 		),
 		array(
 			'name'        => 'WP Engine Advanced Cache',
 			'slug'        => 'wpe-advanced-cache-options',
-			'required'  => false,
+			'required'  => true,
 		),
 
 	);
