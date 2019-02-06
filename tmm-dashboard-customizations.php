@@ -270,13 +270,13 @@ function my_login_logo() { ?>
 			padding: 0;
 		}
         html body {
-	        background: url('<?php 
+	        background: url("<?php 
 		        if ( get_field('login_bg_image', 'option') ) { 
-			        the_field('login_bg_image', 'option'); 
-			    } else { 
-				    echo plugins_url('/login-bg.png', __FILE__);
-				} 
-				?>');
+				the_field('login_bg_image', 'option'); 
+			} else { 
+				echo plugins_url('/login-bg.png', __FILE__);
+			} 
+		?>");
         }
         html body {
 	        display: table;
