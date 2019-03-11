@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.7.7
+ * Version: 1.7.8
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -271,11 +271,13 @@ function my_login_logo() { ?>
 		}
         html body {
 	        background: url("<?php 
-		        if ( get_field('login_bg_image', 'option') ) { 
-				the_field('login_bg_image', 'option'); 
-			} else { 
-				echo plugins_url('/login-bg.png', __FILE__);
-			} 
+		        if (!class_exists('ACF')) {
+				    if ( get_field('login_bg_image', 'option') ) { 
+						the_field('login_bg_image', 'option'); 
+					} else { 
+						echo plugins_url('/login-bg.png', __FILE__);
+					} 
+				}
 		?>");
         }
         html body {
@@ -302,7 +304,11 @@ function my_login_logo() { ?>
         #login h1 a, 
         .login h1 a {
 	        display:none;
-            background-image: url("<?php the_field('login_logo_image', 'option'); ?>");
+            background-image: url("<?php 
+	            if (!class_exists('ACF')) {
+		            the_field('login_logo_image', 'option'); 
+		        } 
+		        ?>");
 			height:65px;
 			width:320px;
 			background-size: 320px 65px;
@@ -310,11 +316,13 @@ function my_login_logo() { ?>
         }
         .login h1::before {
 		    content: url('<?php 
-		        if ( get_field('login_logo_image', 'option') ) { 
-			        the_field('login_logo_image', 'option'); 
-			    } else { 
-				    // do nothing
-				} 
+			    if (!class_exists('ACF')) {
+			        if ( get_field('login_logo_image', 'option') ) { 
+				        the_field('login_logo_image', 'option'); 
+				    } else { 
+					    // do nothing
+					} 
+				}
 				?>');
     	}
     	/* Jetpack's Login Protection */
