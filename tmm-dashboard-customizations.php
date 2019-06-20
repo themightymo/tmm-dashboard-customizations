@@ -307,7 +307,7 @@ function my_login_logo() { ?>
         .login h1 a {
 	        display:none;
             background-image: url("<?php 
-	            if (!class_exists('ACF')) {
+	            if (class_exists('ACF')) {
 		            the_field('login_logo_image', 'option'); 
 		        } 
 		        ?>");
@@ -318,7 +318,7 @@ function my_login_logo() { ?>
         }
         .login h1::before {
 		    content: url('<?php 
-			    if (!class_exists('ACF')) {
+			    if (class_exists('ACF')) {
 			        if ( get_field('login_logo_image', 'option') ) { 
 				        the_field('login_logo_image', 'option'); 
 				    } else { 
