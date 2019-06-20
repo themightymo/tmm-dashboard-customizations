@@ -85,36 +85,36 @@ function tmm_register_required_plugins() {
 		array(
 			'name'         => 'Gravity Forms', // The plugin name.
 			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/gravityforms.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'version'      => '2.4.5.2',
-			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// Required Plugin #2
 		array(
 			'name'         => 'ACF Pro', // The plugin name.
 			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/advanced-custom-fields-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		// Required Plugin #3
 		array(
 			'name'         => 'WP Rocket', // The plugin name.
 			'slug'         => 'wp-rocket', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wp-rocket.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-rocket.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wp-rocket.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-rocket.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		// Required Plugin #4
 		array(
 			'name'         => 'Yoast SEO Premium', // The plugin name.
 			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wordpress-seo-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'version'      => '9.5',
-			'external_url' => 'https://tgmdownloads1.wpengine.com/wp-content/uploads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
