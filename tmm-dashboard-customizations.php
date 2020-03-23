@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Dashboard Customizations by The Mighty Mo!
  * Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
- * Description: Removes stupid dashboard widgets. Adds RSS feed from themightymo.com. Forces activation of Monster Insights and Yoast SEO.  Forces activation of Advanced Custom Fields Pro.  Adds ability to update wp-login.php image (coming soon). 
+ * Description: Auto-hides annoying dashboard widgets. Adds RSS feed from themightymo.com. Asks if you want to install common plugins (SEO, Analytics, Forms, etc).  Adds ability to update wp-login.php image. 
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
