@@ -68,11 +68,11 @@ function tmm_register_required_plugins() {
 		),
 
 		// Monster Insights for Google Analytics from wp.org repo
-		array(
+		/*array(
 			'name'      => 'Monster Insights',
 			'slug'      => 'google-analytics-for-wordpress',
 			'required'  => false,
-		),
+		),*/
 		
 		// Admin Bar Edit Links for Gravity Forms from wp.org repo
 		array(
@@ -81,17 +81,16 @@ function tmm_register_required_plugins() {
 			'required'  => false,
 		),
 		
-		// Required Plugin #1
+		// Gravity Forms
 		array(
 			'name'         => 'Gravity Forms', // The plugin name.
 			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'version'      => '2.4.5.2',
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
-		// Required Plugin #2
+		// ACF Pro
 		array(
 			'name'         => 'ACF Pro', // The plugin name.
 			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
@@ -99,23 +98,40 @@ function tmm_register_required_plugins() {
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
-		// Required Plugin #3
+		
+		// Client Reports from wp.org repo
 		array(
+			'name'      => 'WP Client Reports',
+			'slug'      => 'wp-client-reports',
+			'required'  => false,
+		),
+		
+		// Client Reports Pro
+		array(
+			'name'         => 'ACF Pro', // The plugin name.
+			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
+		),
+		
+		// Required Plugin #3
+		/*array(
 			'name'         => 'WP Rocket', // The plugin name.
 			'slug'         => 'wp-rocket', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-rocket.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-rocket.zip', // If set, overrides default API URL and points to an external URL.
-		),
-		// Required Plugin #4
-		array(
+		),*/
+		// Yoast SEO Premium
+		/*array(
 			'name'         => 'Yoast SEO Premium', // The plugin name.
 			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wordpress-seo-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'version'      => '9.5',
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
-		),
+		),*/
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
@@ -123,12 +139,12 @@ function tmm_register_required_plugins() {
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
-		array(
+		/*array(
 			'name'        => 'WordPress SEO by Yoast',
 			'slug'        => 'wordpress-seo',
 			'is_callable' => 'wpseo_init',
 			'required'  => false,
-		),
+),*/
 
 	);
 
