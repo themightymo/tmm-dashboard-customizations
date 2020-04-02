@@ -106,10 +106,10 @@ function tmm_register_required_plugins() {
 			'required'  => false,
 		),
 		
-		// Client Reports Pro
+		// WP Client Reports Pro
 		array(
-			'name'         => 'ACF Pro', // The plugin name.
-			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
+			'name'         => 'WP Client Reports Pro', // The plugin name.
+			'slug'         => 'wp-client-reports-pro', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
