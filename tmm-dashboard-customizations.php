@@ -84,7 +84,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Stuck? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST).';
+  echo 'Questions? Stuck? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST)<a href="/wp-admin/plugins.php?page=tgmpa-install-plugins">.</a>';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
