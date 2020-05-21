@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.8.2
+ * Version: 1.8.3
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -43,6 +43,7 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'email_log_dashboard_widget', 'dashboard', 'normal' );
 	remove_meta_box( 'themefusion_news', 'dashboard', 'normal' );
 	remove_meta_box( 'duplicate-post-notice', 'dashboard', 'normal' );
+	remove_meta_box( 'wbcr-factory-adverts-widget', 'dashboard', 'normal' );
 	
 	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
 	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );
