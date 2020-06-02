@@ -63,7 +63,7 @@ function tmm_support_dashboard_widget_function( $post, $callback_args ) {
 		<img src='" . plugins_url('/support.png', __FILE__) . "' style='max-width:15%;display:inline-block;'>
 		<div style='display:inline-block;max-width:66%;vertical-align: top;'>Hi!  It's me, Toby Cryns, from The Mighty Mo!  <br>I'm here to help.  Call or email with questions.
 		<ul style='list-style: disc inside;'>
-			<li>Email: <a href='mailto:toby@themightymo.com'>toby@themightymo.com</a></li>
+			<li>Email: <a href='mailto:support@themightymo.com'>support@themightymo.com</a></li>
 			<li>Phone: (612) 293-8629</li>
 		</ul></div>";
 	
