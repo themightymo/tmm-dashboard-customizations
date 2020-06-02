@@ -108,6 +108,15 @@ function tmm_register_required_plugins() {
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
+		// Gravity Divi - Gravity Forms Styler for Divi
+		array(
+			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
+			'slug'         => 'wp-client-reports-pro', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1', // If set, overrides default API URL and points to an external URL.
+		),
+		
 		// wpmu-dev-dashboard
 		array(
 			'name'         => 'WPMU Dev Dashboard', // The plugin name.
