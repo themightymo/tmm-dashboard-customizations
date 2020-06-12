@@ -83,6 +83,15 @@ function tmm_register_required_plugins() {
 			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
+		// Gravity Divi - Gravity Forms Styler for Divi
+		array(
+			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
+			'slug'         => 'gravitydivi-forms-customizer-module', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1.zip', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1.zip', // If set, overrides default API URL and points to an external URL.
+		),
+		
 		// ACF Pro
 		array(
 			'name'         => 'ACF Pro', // The plugin name.
