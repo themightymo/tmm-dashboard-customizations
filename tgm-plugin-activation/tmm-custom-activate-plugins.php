@@ -221,7 +221,7 @@ function tmm_register_required_plugins() {
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'parent_slug'  => 'plugins.php',            // Parent menu slug.
 		'capability'   => 'manage_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-		'has_notices'  => true,                    // Show admin notices or not.
+		'has_notices'  => false,                    // Show admin notices or not.
 		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
