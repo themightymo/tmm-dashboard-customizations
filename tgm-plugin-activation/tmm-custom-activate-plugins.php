@@ -78,27 +78,27 @@ function tmm_register_required_plugins() {
 		array(
 			'name'         => 'Gravity Forms', // The plugin name.
 			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// Gravity Divi - Gravity Forms Styler for Divi
 		array(
 			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
 			'slug'         => 'gravitydivi-forms-customizer-module', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// ACF Pro
 		array(
 			'name'         => 'ACF Pro', // The plugin name.
 			'slug'         => 'advanced-custom-fields-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/advanced-custom-fields-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/advanced-custom-fields-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// Client Reports from wp.org repo
@@ -112,81 +112,81 @@ function tmm_register_required_plugins() {
 		array(
 			'name'         => 'WP Client Reports Pro', // The plugin name.
 			'slug'         => 'wp-client-reports-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wp-client-reports-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// Gravity Divi - Gravity Forms Styler for Divi
 		array(
 			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
 			'slug'         => 'wp-client-reports-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/gravitydivi-forms-customizer-module-1', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// wpmu-dev-dashboard
 		array(
 			'name'         => 'WPMU Dev Dashboard', // The plugin name.
 			'slug'         => 'wpmu-dev-dashboard', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wpmu-dev-dashboard.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/wpmu-dev-dashboard.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// integrated-video-tutorials
 		array(
 			'name'         => 'Integrated Video Tutorials', // The plugin name.
 			'slug'         => 'integrated-video-tutorials', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/integrated-video-tutorials.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/integrated-video-tutorials.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/integrated-video-tutorials.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/integrated-video-tutorials.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// beehive-pro
 		array(
 			'name'         => 'Beehive Pro (Google Analytics)', // The plugin name.
 			'slug'         => 'beehive-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/beehive-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/beehive-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/beehive-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/beehive-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// smartcrawl
 		array(
 			'name'         => 'Smartcrawl Pro (SEO)', // The plugin name.
 			'slug'         => 'smartcrawl', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/smartcrawl.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/smartcrawl.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/smartcrawl.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/smartcrawl.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// defender-pro
 		array(
 			'name'         => 'Defender Pro (Security)', // The plugin name.
 			'slug'         => 'defender-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/defender-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/defender-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/defender-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/defender-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// branda-pro
 		array(
 			'name'         => 'Branda Pro (WP Admin Design)', // The plugin name.
 			'slug'         => 'branda-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/branda-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/branda-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/branda-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/branda-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// hustle-pro
 		array(
 			'name'         => 'Hustle Pro (Email Marketing Popups)', // The plugin name.
 			'slug'         => 'hustle-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/hustle-pro.zip', // The plugin source.
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/hustle-pro.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.mystagingwebsite.com/wp-content/uploads/hustle-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/hustle-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		
