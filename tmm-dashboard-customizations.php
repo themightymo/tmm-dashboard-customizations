@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.8.6
+ * Version: 1.8.7
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -170,7 +170,6 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Login Design',
 		'menu_title' 	=> 'Login Design',
-		'parent_slug' 	=> $parent['options-general.php'],
 		'parent'     	=> 'options-general.php',
 		'menu_slug'     => 'login_design',
         'capability'    => 'manage_options',
