@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.8.7
+ * Version: 1.9
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -43,7 +43,6 @@ function tmm_dashboard_widgets() {
 	remove_meta_box( 'email_log_dashboard_widget', 'dashboard', 'normal' );
 	remove_meta_box( 'themefusion_news', 'dashboard', 'normal' );
 	remove_meta_box( 'duplicate-post-notice', 'dashboard', 'normal' );
-	remove_meta_box( 'wbcr-factory-adverts-widget', 'dashboard', 'normal' );
 	
 	wp_add_dashboard_widget('tmm_support_dashboard_widget', 'Need Help?', 'tmm_support_dashboard_widget_function');
 	wp_add_dashboard_widget( 'dashboard_custom_feed', 'Updates from The Mighty Mo!', 'tmm_dashboard_custom_feed_output' );
@@ -63,7 +62,7 @@ function tmm_support_dashboard_widget_function( $post, $callback_args ) {
 		<img src='" . plugins_url('/support.png', __FILE__) . "' style='max-width:15%;display:inline-block;'>
 		<div style='display:inline-block;max-width:66%;vertical-align: top;'>Hi!  It's me, Toby Cryns, from The Mighty Mo!  <br>I'm here to help.  Call or email with questions.
 		<ul style='list-style: disc inside;'>
-			<li>Email: <a href='mailto:support@themightymo.com'>support@themightymo.com</a></li>
+			<li>Email: <a href='mailto:toby@themightymo.com'>toby@themightymo.com</a></li>
 			<li>Phone: (612) 293-8629</li>
 		</ul></div>";
 	
@@ -85,7 +84,7 @@ function tmm_dashboard_custom_feed_output() {
 
 // Change the text that appears in the bottom-left of the dashboard - via http://www.instantshift.com/2012/03/06/21-most-useful-wordpress-admin-page-hacks/
 function tmm_custom_admin_footer_text () {
-  echo 'Questions? Stuck? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST)<a href="/wp-admin/plugins.php?page=tgmpa-install-plugins">.</a>';
+  echo 'Questions? Stuck? Email <a href="mailto:support@themightymo.com">support@themightymo.com</a> or call 612-293-8629 (9-5 CST).';
 }
 add_filter('admin_footer_text', 'tmm_custom_admin_footer_text');
 
@@ -165,19 +164,38 @@ add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
 	BEGIN UPDATE THE WP-LOGIN.PHP LOGO
 */
 // Add Advanced Custom Fields Options/Sitewide Content page for wp-login.php image underneath the normal "Settings" menu
-if( function_exists('acf_add_options_page') ) {
+/*if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Login Design',
 		'menu_title' 	=> 'Login Design',
+		'parent_slug' 	=> $parent['options-general.php'],
 		'parent'     	=> 'options-general.php',
 		'menu_slug'     => 'login_design',
         'capability'    => 'manage_options',
         'redirect'      => false, 
 	));
 	
-}
+}*/
+// BEGIN ADDED 2020.12.20
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
 
+    // Check function exists.
+    if( function_exists('acf_add_options_sub_page') ) {
+
+        // Add sub page.
+        $child = acf_add_options_sub_page(array(
+            'page_title'  => __('Login Design'),
+            'menu_title'  => __('Login Design'),
+			'parent_slug' 	=> 'options-general.php',
+			'menu_slug'     => 'login_design',
+        	'capability'    => 'manage_options',
+            'redirect'    => false,
+        ));
+    }
+}
+// END ADDED 2020.12.20
 /* 
 	BEGIN ACF CUSTOM FIELDS
 */
