@@ -83,6 +83,15 @@ function tmm_register_required_plugins() {
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
+		// Updraft Plus
+		array(
+			'name'         => 'Updraft Plus', // The plugin name.
+			'slug'         => 'updraftplus', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // If set, overrides default API URL and points to an external URL.
+		),
+		
 		// Gravity Divi - Gravity Forms Styler for Divi
 		array(
 			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
