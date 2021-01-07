@@ -65,6 +65,7 @@ function tmm_register_required_plugins() {
 			'slug'      => 'github-updater',
 			'required'  => false,
 			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
+			'version'      => '9.9.4.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// Admin Bar Edit Links for Gravity Forms from wp.org repo
@@ -90,6 +91,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '2.16.43.24', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// Gravity Divi - Gravity Forms Styler for Divi
@@ -115,15 +117,6 @@ function tmm_register_required_plugins() {
 			'name'      => 'WP Client Reports',
 			'slug'      => 'wp-client-reports',
 			'required'  => false,
-		),
-		
-		// WP Client Reports Pro
-		array(
-			'name'         => 'WP Client Reports Pro', // The plugin name.
-			'slug'         => 'wp-client-reports-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wp-client-reports-pro.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wp-client-reports-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
 		// Gravity Divi - Gravity Forms Styler for Divi
