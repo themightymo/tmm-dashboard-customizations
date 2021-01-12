@@ -159,6 +159,16 @@ function tmm_register_required_plugins() {
 			'version'      => '12.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
+		// tmm-dashboard-customizations (TMM Dashboard Customizations) - I know this is circular, but sometimes the darn thing won't update as it should...
+		array(
+			'name'         => 'TMM Dashboard Customizations', // The plugin name.
+			'slug'         => 'tmm-dashboard-customizations', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/tmm-dashboard-customizations.zip', // The plugin source.
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/tmm-dashboard-customizations', // If set, overrides default API URL and points to an external URL.
+			'version'      => '1.9.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+		),
+		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
 		// 'wordpress-seo-premium'.
