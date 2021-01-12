@@ -126,63 +126,38 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '4.10.6',
 		),
 		
-		// integrated-video-tutorials
+		// wordpress-seo-premium (Yoast SEO Premium)
 		array(
-			'name'         => 'Integrated Video Tutorials', // The plugin name.
-			'slug'         => 'integrated-video-tutorials', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/integrated-video-tutorials.zip', // The plugin source.
+			'name'         => 'Yoast SEO Premium', // The plugin name.
+			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/integrated-video-tutorials.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '15.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
-		// beehive-pro
+		// wpseo-local (Yoast SEO Local)
 		array(
-			'name'         => 'Beehive Pro (Google Analytics)', // The plugin name.
-			'slug'         => 'beehive-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/beehive-pro.zip', // The plugin source.
+			'name'         => 'Yoast SEO Local', // The plugin name.
+			'slug'         => 'wpseo-local', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/beehive-pro.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '13.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
-		// smartcrawl
+		// wpseo-news (Yoast SEO News)
 		array(
-			'name'         => 'Smartcrawl Pro (SEO)', // The plugin name.
-			'slug'         => 'smartcrawl', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/smartcrawl.zip', // The plugin source.
+			'name'         => 'Yoast SEO News', // The plugin name.
+			'slug'         => 'wpseo-news', // The plugin slug (typically the folder name).
+			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/smartcrawl.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '12.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
-		
-		// defender-pro
-		array(
-			'name'         => 'Defender Pro (Security)', // The plugin name.
-			'slug'         => 'defender-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/defender-pro.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/defender-pro.zip', // If set, overrides default API URL and points to an external URL.
-		),
-		
-		// branda-pro
-		array(
-			'name'         => 'Branda Pro (WP Admin Design)', // The plugin name.
-			'slug'         => 'branda-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/branda-pro.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/branda-pro.zip', // If set, overrides default API URL and points to an external URL.
-		),
-		
-		// hustle-pro
-		array(
-			'name'         => 'Hustle Pro (Email Marketing Popups)', // The plugin name.
-			'slug'         => 'hustle-pro', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/hustle-pro.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/hustle-pro.zip', // If set, overrides default API URL and points to an external URL.
-		),
-		
-		
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
