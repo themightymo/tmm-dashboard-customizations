@@ -92,6 +92,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '2.4.22.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// Updraft Plus
