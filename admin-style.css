@@ -1,11 +1,19 @@
+/* Hide stuff that is for tech admins to manage */
 #dashboard-customizations-by-the-mighty-mo-design-co,
 [data-slug="dashboard-customizations-by-the-mighty-mo"],
 .jp-banner,
 .monsterinsights-notice,
 .error
-[data-slug="dashboard-customizations-by-the-mighty-mo"] {
+[data-slug="dashboard-customizations-by-the-mighty-mo"],
+tr[data-slug="updraftplus"],
+tr[data-slug="sg-cachepress"],
+li#wp-admin-bar-updraft_admin_node,
+tr[data-slug="amazon-s3-and-cloudfront"],
+tr[data-slug="media-cloud-premium"],
+tr[data-slug="github-updater"] {
 	display: none;
 }
+/* If the current user is Toby or themightymo, then display stuff. */
 .username-themightymo #dashboard-customizations-by-the-mighty-mo-design-co,
 .username-themightymo .jp-banner,
 .username-themightymo .monsterinsights-notice,
@@ -13,7 +21,13 @@
 .username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
 .username-toby .jp-banner,
 .username-toby .monsterinsights-notice,
-.username-toby [data-slug="dashboard-customizations-by-the-mighty-mo"] {
+.username-toby [data-slug="dashboard-customizations-by-the-mighty-mo"],
+.username-themightymo tr[data-slug="updraftplus"],
+.username-themightymo li#wp-admin-bar-updraft_admin_node,
+.username-themightymo tr[data-slug="sg-cachepress"],
+.username-themightymo tr[data-slug="amazon-s3-and-cloudfront"],
+.username-themightymo tr[data-slug="media-cloud-premium"],
+.username-themightymo tr[data-slug="github-updater"] {
 	display: table-row;
 }
 #tmm_support_dashboard_widget {

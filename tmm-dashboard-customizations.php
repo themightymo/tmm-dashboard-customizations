@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.9.7
+ * Version: 1.9.8
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -15,6 +15,7 @@
 
 require_once dirname( __FILE__ ) . '/tgm-plugin-activation/class-tgm-plugin-activation.php';
 require_once dirname( __FILE__ ) . '/tgm-plugin-activation/tmm-custom-activate-plugins.php';
+
 
  
 // Add and Remove Dashboard widgets - via https://codex.wordpress.org/Dashboard_Widgets_API#Advanced:_Removing_Dashboard_Widgets and http://adamscottcreative.com/add-your-own-news-feed-to-wordpress-dashboard/
@@ -137,6 +138,8 @@ function tmm_enqueue_admin_styles($hook) {
 	get_currentuserinfo();
     wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
     wp_enqueue_style( 'tmm-enqueue-admin-styles' );
+    //wp_register_script('tmm-enqueue-admin-js', plugins_url('/admin-js.js', __FILE__));
+    //wp_enqueue_script( 'tmm-enqueue-admin-js' );
 }
 add_action( 'admin_enqueue_scripts', 'tmm_enqueue_admin_styles' );
 
