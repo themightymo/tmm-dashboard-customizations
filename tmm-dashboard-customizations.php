@@ -164,23 +164,8 @@ add_filter( 'admin_body_class', 'tmm_add_username_to_admin_body_class' );
 
 
 /*
-	BEGIN UPDATE THE WP-LOGIN.PHP LOGO
+	Add your own WP-LOGIN.PHP logo, Updated 2020.12.20
 */
-// Add Advanced Custom Fields Options/Sitewide Content page for wp-login.php image underneath the normal "Settings" menu
-/*if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Login Design',
-		'menu_title' 	=> 'Login Design',
-		'parent_slug' 	=> $parent['options-general.php'],
-		'parent'     	=> 'options-general.php',
-		'menu_slug'     => 'login_design',
-        'capability'    => 'manage_options',
-        'redirect'      => false, 
-	));
-	
-}*/
-// BEGIN ADDED 2020.12.20
 add_action('acf/init', 'my_acf_op_init');
 function my_acf_op_init() {
 
@@ -198,7 +183,7 @@ function my_acf_op_init() {
         ));
     }
 }
-// END ADDED 2020.12.20
+
 /* 
 	BEGIN ACF CUSTOM FIELDS
 */

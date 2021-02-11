@@ -10,7 +10,8 @@ tr[data-slug="sg-cachepress"],
 li#wp-admin-bar-updraft_admin_node,
 tr[data-slug="amazon-s3-and-cloudfront"],
 tr[data-slug="media-cloud-premium"],
-tr[data-slug="github-updater"] {
+tr[data-slug="github-updater"],
+li#toplevel_page_media-cloud {
 	display: none;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
@@ -23,7 +24,8 @@ tr[data-slug="github-updater"] {
 .username-toby tr[data-slug="sg-cachepress"],
 .username-toby tr[data-slug="amazon-s3-and-cloudfront"],
 .username-toby tr[data-slug="media-cloud-premium"],
-.username-toby tr[data-slug="github-updater"]
+.username-toby tr[data-slug="github-updater"],
+.username-toby li#toplevel_page_media-cloud,
 
 .username-themightymo #dashboard-customizations-by-the-mighty-mo-design-co,
 .username-themightymo .jp-banner,
@@ -34,7 +36,8 @@ tr[data-slug="github-updater"] {
 .username-themightymo tr[data-slug="sg-cachepress"],
 .username-themightymo tr[data-slug="amazon-s3-and-cloudfront"],
 .username-themightymo tr[data-slug="media-cloud-premium"],
-.username-themightymo tr[data-slug="github-updater"] {
+.username-themightymo tr[data-slug="github-updater"],
+.username-themightymo li#toplevel_page_media-cloud {
 	display: table-row;
 }
 #tmm_support_dashboard_widget {
