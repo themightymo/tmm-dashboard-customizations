@@ -14,14 +14,21 @@ tr[data-slug="github-updater"] {
 	display: none;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
-.username-themightymo #dashboard-customizations-by-the-mighty-mo-design-co,
-.username-themightymo .jp-banner,
-.username-themightymo .monsterinsights-notice,
-.username-themightymo [data-slug="dashboard-customizations-by-the-mighty-mo"],
 .username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
 .username-toby .jp-banner,
 .username-toby .monsterinsights-notice,
 .username-toby [data-slug="dashboard-customizations-by-the-mighty-mo"],
+.username-toby tr[data-slug="updraftplus"],
+.username-toby li#wp-admin-bar-updraft_admin_node,
+.username-toby tr[data-slug="sg-cachepress"],
+.username-toby tr[data-slug="amazon-s3-and-cloudfront"],
+.username-toby tr[data-slug="media-cloud-premium"],
+.username-toby tr[data-slug="github-updater"]
+
+.username-themightymo #dashboard-customizations-by-the-mighty-mo-design-co,
+.username-themightymo .jp-banner,
+.username-themightymo .monsterinsights-notice,
+.username-themightymo [data-slug="dashboard-customizations-by-the-mighty-mo"],
 .username-themightymo tr[data-slug="updraftplus"],
 .username-themightymo li#wp-admin-bar-updraft_admin_node,
 .username-themightymo tr[data-slug="sg-cachepress"],
