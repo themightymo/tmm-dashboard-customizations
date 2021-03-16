@@ -70,8 +70,8 @@ function tmm_register_required_plugins() {
 		
 		// Media Cloud S3 Offload
 		array(
-			'name'         => 'Media Cloud S3 Offload', // The plugin name.
-			'slug'         => 'ilab-media-tools-premium', // The plugin slug (typically the folder name).
+			'name'         => 'Media Cloud (Premium)', // The plugin name.
+			'slug'         => 'ilab-media-tools', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // If set, overrides default API URL and points to an external URL.
