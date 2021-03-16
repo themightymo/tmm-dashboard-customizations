@@ -75,7 +75,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '4.2.5', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '4.2.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// Admin Bar Edit Links for Gravity Forms from wp.org repo
