@@ -92,7 +92,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '2.4.22.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '2.5.0.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// Updraft Plus
@@ -123,13 +123,6 @@ function tmm_register_required_plugins() {
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
-		// Client Reports from wp.org repo
-		array(
-			'name'      => 'WP Client Reports',
-			'slug'      => 'wp-client-reports',
-			'required'  => false,
-		),
-		
 		// wpmu-dev-dashboard
 		array(
 			'name'         => 'WPMU Dev Dashboard', // The plugin name.
@@ -147,7 +140,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '15.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '16.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// wpseo-local (Yoast SEO Local)
@@ -157,7 +150,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '13.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '13.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// wpseo-news (Yoast SEO News)
@@ -167,7 +160,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '12.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '12.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// tmm-dashboard-customizations (TMM Dashboard Customizations) - I know this is circular, but sometimes the darn thing won't update as it should...
