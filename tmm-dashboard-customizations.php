@@ -358,6 +358,10 @@ function my_login_logo() { ?>
 		.login #login_error {
 			background-color: inherit !important;
 		}
+		/* Wordfence 2FA overlay */
+		body #wfls-prompt-overlay {
+			background: inherit;
+		}
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
