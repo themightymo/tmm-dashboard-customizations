@@ -11,6 +11,7 @@ li#wp-admin-bar-updraft_admin_node,
 tr[data-slug="amazon-s3-and-cloudfront"],
 tr[data-slug="media-cloud-premium"],
 tr[data-slug="github-updater"],
+tr[data-slug="worker"],
 li#toplevel_page_media-cloud {
 	display: none;
 }
