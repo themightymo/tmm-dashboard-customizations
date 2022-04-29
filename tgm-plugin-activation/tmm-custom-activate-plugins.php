@@ -62,27 +62,9 @@ function tmm_register_required_plugins() {
 		// afragen's Github Updater plugin keeps the tmm-dashboard-customizations plugin up-to-date
 		array(
 			'name'      => 'Github Updater',
-			'slug'      => 'github-updater',
+			'slug'      => 'git-updater',
 			'required'  => false,
 			'source'    => 'https://github.com/afragen/github-updater/archive/master.zip',
-			'version'      => '9.9.4.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// Media Cloud S3 Offload
-		array(
-			'name'         => 'Media Cloud (Premium)', // The plugin name.
-			'slug'         => 'ilab-media-tools', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/ilab-media-tools-premium.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '4.2.8', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// Admin Bar Edit Links for Gravity Forms from wp.org repo
-		array(
-			'name'      => 'Admin Bar Edit Links for Gravity Forms',
-			'slug'      => 'admin-bar-edit-links-for-gravity-forms',
-			'required'  => false,
 		),
 		
 		// Gravity Forms
@@ -91,27 +73,8 @@ function tmm_register_required_plugins() {
 			'slug'         => 'gravityforms', // The plugin slug (typically the folder name).
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '2.5.0.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// Updraft Plus
-		array(
-			'name'         => 'Updraft Plus', // The plugin name.
-			'slug'         => 'updraftplus', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/updraftplus.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '2.16.56.25', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// Gravity Divi - Gravity Forms Styler for Divi
-		array(
-			'name'         => 'Gravity Divi - Gravity Forms Styler for Divi', // The plugin name.
-			'slug'         => 'gravitydivi-forms-customizer-module', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravitydivi-forms-customizer-module-1.zip', // If set, overrides default API URL and points to an external URL.
+			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/gravityforms_2.6.1.3.zip', // If set, overrides default API URL and points to an external URL.
+			'version'      => '2.6.1.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// ACF Pro
@@ -123,46 +86,6 @@ function tmm_register_required_plugins() {
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/advanced-custom-fields-pro.zip', // If set, overrides default API URL and points to an external URL.
 		),
 		
-		// wpmu-dev-dashboard
-		array(
-			'name'         => 'WPMU Dev Dashboard', // The plugin name.
-			'slug'         => 'wpmu-dev-dashboard', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpmu-dev-dashboard.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '4.10.6',
-		),
-		
-		// wordpress-seo-premium (Yoast SEO Premium)
-		array(
-			'name'         => 'Yoast SEO Premium', // The plugin name.
-			'slug'         => 'wordpress-seo-premium', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wordpress-seo-premium.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '16.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// wpseo-local (Yoast SEO Local)
-		array(
-			'name'         => 'Yoast SEO Local', // The plugin name.
-			'slug'         => 'wpseo-local', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-local.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '13.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
-		// wpseo-news (Yoast SEO News)
-		array(
-			'name'         => 'Yoast SEO News', // The plugin name.
-			'slug'         => 'wpseo-news', // The plugin slug (typically the folder name).
-			'source'       => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // The plugin source.
-			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
-			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/wpseo-news.zip', // If set, overrides default API URL and points to an external URL.
-			'version'      => '12.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
-		),
-		
 		// tmm-dashboard-customizations (TMM Dashboard Customizations) - I know this is circular, but sometimes the darn thing won't update as it should...
 		array(
 			'name'         => 'TMM Dashboard Customizations', // The plugin name.
@@ -170,7 +93,7 @@ function tmm_register_required_plugins() {
 			'source'       => 'https://tgmdownloads.themightymo.com/downloads/tmm-dashboard-customizations.zip', // The plugin source.
 			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://tgmdownloads.themightymo.com/downloads/tmm-dashboard-customizations', // If set, overrides default API URL and points to an external URL.
-			'version'      => '1.9.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'      => '1.9.13', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		),
 		
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
