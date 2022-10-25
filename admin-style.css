@@ -26,7 +26,7 @@ tr[data-slug="worker"],
 li#toplevel_page_media-cloud,
 div.fs-notice.promotion,
 #wpnotice-embedpress-review {
-	display: none;
+	display: none !important;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
 .username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
