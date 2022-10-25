@@ -24,7 +24,8 @@ tr[data-slug="media-cloud-premium"],
 tr[data-slug="github-updater"],
 tr[data-slug="worker"],
 li#toplevel_page_media-cloud,
-div.fs-notice.promotion {
+div.fs-notice.promotion,
+#wpnotice-embedpress-review {
 	display: none;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
