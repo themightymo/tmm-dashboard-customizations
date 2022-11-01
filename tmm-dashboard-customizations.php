@@ -136,7 +136,7 @@ function tmm_enqueue_admin_styles($hook) {
   
     global $current_user;
 	get_currentuserinfo();
-    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css', __FILE__));
+    wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css'. '?' . time(), __FILE__ ));
     wp_enqueue_style( 'tmm-enqueue-admin-styles' );
     //wp_register_script('tmm-enqueue-admin-js', plugins_url('/admin-js.js', __FILE__));
     //wp_enqueue_script( 'tmm-enqueue-admin-js' );
