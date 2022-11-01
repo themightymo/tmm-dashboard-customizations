@@ -26,7 +26,8 @@ tr[data-slug="worker"],
 li#toplevel_page_media-cloud,
 div.fs-notice.promotion,
 #wpnotice-embedpress-review,
-div#wpmudev-dashboard-upsell-notice {
+div#wpmudev-dashboard-upsell-notice,
+.jitm-card.jitm-banner.has-call-to-action.is-upgrade-premium {
 	display: none !important;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
