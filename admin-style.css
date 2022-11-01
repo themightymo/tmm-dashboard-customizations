@@ -25,7 +25,8 @@ tr[data-slug="github-updater"],
 tr[data-slug="worker"],
 li#toplevel_page_media-cloud,
 div.fs-notice.promotion,
-#wpnotice-embedpress-review {
+#wpnotice-embedpress-review,
+div#wpmudev-dashboard-upsell-notice {
 	display: none !important;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
