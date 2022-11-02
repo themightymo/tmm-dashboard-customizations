@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.9.22
+ * Version: 1.9.23
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -131,11 +131,6 @@ function tmm_display_post_thumbnail_column($col, $id){
 // Hide this plugin from the plugins list in the dashboard if you aren't The Mighty Mo! - via http://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts
 function tmm_enqueue_admin_styles($hook) {
 		
-    if ( 'plugins.php' != $hook && 'index.php' != $hook ) 
-    return;
-  
-    global $current_user;
-	get_currentuserinfo();
     wp_register_style('tmm-enqueue-admin-styles', plugins_url('/admin-style.css'. '?' . time(), __FILE__ ));
     wp_enqueue_style( 'tmm-enqueue-admin-styles' );
     //wp_register_script('tmm-enqueue-admin-js', plugins_url('/admin-js.js', __FILE__));
