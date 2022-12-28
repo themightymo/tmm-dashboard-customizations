@@ -27,7 +27,8 @@ li#toplevel_page_media-cloud,
 div.fs-notice.promotion,
 #wpnotice-embedpress-review,
 div#wpmudev-dashboard-upsell-notice,
-.jitm-card.jitm-banner.has-call-to-action.is-upgrade-premium {
+.jitm-card.jitm-banner.has-call-to-action.is-upgrade-premium,
+.upgrade-sidebar {
 	display: none !important;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
