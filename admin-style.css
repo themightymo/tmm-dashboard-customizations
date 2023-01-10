@@ -57,7 +57,7 @@ div#wpmudev-dashboard-upsell-notice,
 .username-themightymo tr[data-slug="github-updater"],
 .username-themightymo tr[data-slug="worker"],
 .username-themightymo li#toplevel_page_media-cloud {
-	display: table-row;
+	display: table-row !important;
 }
 #tmm_support_dashboard_widget {
 	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);
