@@ -28,7 +28,8 @@ div.fs-notice.promotion,
 #wpnotice-embedpress-review,
 div#wpmudev-dashboard-upsell-notice,
 .jitm-card.jitm-banner.has-call-to-action.is-upgrade-premium,
-.upgrade-sidebar {
+.upgrade-sidebar,
+#wp_mail_smtp_reports_widget_lite {
 	display: none !important;
 }
 /* If the current user is Toby or themightymo, then display stuff. */
