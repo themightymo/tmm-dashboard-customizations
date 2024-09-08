@@ -6,7 +6,7 @@
  * Author: The Mighty Mo!
  * Author URI: http://www.themightymo.com/
  * License: GPLv2 (or later)
- * Version: 1.9.26
+ * Version: 1.10
  * GitHub Plugin URI: https://github.com/themightymo/tmm-dashboard-customizations
  * GitHub Branch: master
  * Roadmap: Add tgm plugin activation plugin that then calls this one (include the github updater plugin so I can keep sites up-to-date with this one).
@@ -378,4 +378,23 @@ add_action('admin_init', 'tmm_remove_menu_elements', 102);
 function tmm_remove_menu_elements(){
 	remove_submenu_page( 'themes.php', 'theme-editor.php' );
 	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+}
+
+
+/* 
+	Show notice in admin bar if the "Discourage search engines from indexing this site" option is checked at /wp-admin/options-reading.php.
+*/
+// Hook into the admin bar to add our custom text
+add_action('admin_bar_menu', 'tmm_add_admin_bar_notice_if_search_engines_blocked', 100);
+
+function tmm_add_admin_bar_notice_if_search_engines_blocked($wp_admin_bar) {
+    // Check if the option to discourage search engines is checked
+    if (get_option('blog_public') == '0') {
+        // Add a notice to the admin bar
+        $wp_admin_bar->add_node([
+            'id'    => 'sei-notice',
+            'title' => '<span style="background-color:red;color: white;">You are blocking search engines.</span>',
+            'href'  => admin_url('options-reading.php'), // Link to the Reading Settings page
+        ]);
+    }
 }
