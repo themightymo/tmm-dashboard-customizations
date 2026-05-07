@@ -1,5 +1,5 @@
 /* Hide stuff that is for tech admins to manage */
-#dashboard-customizations-by-the-mighty-mo-design-co,
+/*#dashboard-customizations-by-the-mighty-mo-design-co,
 [data-slug="dashboard-customizations-by-the-mighty-mo"],
 .jp-banner,
 .monsterinsights-notice,
@@ -31,9 +31,9 @@ div#wpmudev-dashboard-upsell-notice,
 .upgrade-sidebar,
 #wp_mail_smtp_reports_widget_lite {
 	display: none !important;
-}
+}*/
 /* If the current user is Toby or themightymo, then display stuff. */
-.username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
+/*.username-toby #dashboard-customizations-by-the-mighty-mo-design-co,
 .username-toby .jp-banner,
 .username-toby .monsterinsights-notice,
 .username-toby [data-slug="dashboard-customizations-by-the-mighty-mo"],
@@ -59,7 +59,7 @@ div#wpmudev-dashboard-upsell-notice,
 .username-themightymo tr[data-slug="worker"],
 .username-themightymo li#toplevel_page_media-cloud {
 	display: table-row !important;
-}
+}*/
 #tmm_support_dashboard_widget {
 	background: url(https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png);
 }
