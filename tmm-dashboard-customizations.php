@@ -13,8 +13,8 @@
  */
  
 
-require_once dirname( __FILE__ ) . '/tgm-plugin-activation/class-tgm-plugin-activation.php';
-require_once dirname( __FILE__ ) . '/tgm-plugin-activation/tmm-custom-activate-plugins.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/constants.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/github-updater.php';
 
 
  
