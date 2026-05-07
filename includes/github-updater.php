@@ -118,3 +118,33 @@ function tmm_dc_handle_clear_cache_action() {
     }
 }
 add_action( 'admin_init', 'tmm_dc_handle_clear_cache_action' );
+
+add_filter( 'plugin_action_links_' . TMM_DC_PLUGIN_FILE, 'tmm_dc_plugin_action_links' );
+function tmm_dc_plugin_action_links( $links ) {
+    $clear_url = wp_nonce_url(
+        add_query_arg( 'tmm_dc_clear_cache', '1', admin_url( 'plugins.php' ) ),
+        'tmm_dc_clear_cache'
+    );
+    $links[] = '<a href="' . esc_url( $clear_url ) . '">Clear Update Cache</a>';
+    return $links;
+}
+
+add_action( 'admin_init', 'tmm_dc_handle_clear_cache_get' );
+function tmm_dc_handle_clear_cache_get() {
+    if (
+        isset( $_GET['tmm_dc_clear_cache'] ) &&
+        check_admin_referer( 'tmm_dc_clear_cache' )
+    ) {
+        tmm_dc_clear_github_update_cache();
+        delete_site_transient( 'update_plugins' );
+        wp_safe_redirect( add_query_arg( 'tmm_dc_cache_cleared', '1', admin_url( 'plugins.php' ) ) );
+        exit;
+    }
+}
+
+add_action( 'admin_notices', 'tmm_dc_cache_cleared_notice' );
+function tmm_dc_cache_cleared_notice() {
+    if ( isset( $_GET['tmm_dc_cache_cleared'] ) ) {
+        echo '<div class="notice notice-success is-dismissible"><p>GitHub update cache cleared.</p></div>';
+    }
+}
